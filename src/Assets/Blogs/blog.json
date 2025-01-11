@@ -1,0 +1,47 @@
+[
+  {
+    "title": "The Future of Technology: Trends to Watch in 2025",
+    "author": "Jane Doe",
+    "date": "2025-01-10",
+    "excerpt": "Explore the emerging technologies set to reshape industries in 2025, including AI, blockchain, and quantum computing.",
+    "image_url": "https://images.unsplash.com/photo-1534777410146-2b2da4b0d8d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tags": ["Technology", "AI", "Innovation"],
+    "read_more_link": "https://example.com/blog/the-future-of-technology"
+  },
+  {
+    "title": "10 Tips for a Healthy Work-Life Balance",
+    "author": "John Smith",
+    "date": "2025-01-08",
+    "excerpt": "Learn how to manage your time effectively, prioritize tasks, and make space for self-care in your daily routine.",
+    "image_url": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tags": ["Lifestyle", "Productivity", "Well-being"],
+    "read_more_link": "https://example.com/blog/healthy-work-life-balance"
+  },
+  {
+    "title": "Mastering JavaScript: Top Frameworks to Learn in 2025",
+    "author": "Emily Brown",
+    "date": "2025-01-05",
+    "excerpt": "Dive into the most popular JavaScript frameworks, including React, Vue, and Angular, and their use cases.",
+    "image_url": "https://images.unsplash.com/photo-1517430816045-df4b7de0fae4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tags": ["Programming", "JavaScript", "Web Development"],
+    "read_more_link": "https://example.com/blog/javascript-frameworks-2025"
+  },
+  {
+    "title": "Travel on a Budget: Top Destinations for 2025",
+    "author": "Alex Green",
+    "date": "2025-01-03",
+    "excerpt": "Discover affordable travel destinations that offer incredible experiences without breaking the bank.",
+    "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tags": ["Travel", "Budget", "Adventure"],
+    "read_more_link": "https://example.com/blog/budget-travel-2025"
+  },
+  {
+    "title": "Sustainable Living: Simple Changes for a Greener Planet",
+    "author": "Sophia White",
+    "date": "2025-01-01",
+    "excerpt": "Adopt eco-friendly practices in your daily life with these simple yet impactful tips for sustainability.",
+    "image_url": "https://images.unsplash.com/photo-1565120130299-ea547b2e5199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tags": ["Environment", "Sustainability", "Lifestyle"],
+    "read_more_link": "https://example.com/blog/sustainable-living"
+  }
+]
