@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "heading": "We're here for you",
+    "subheading": "no matter where you are",
+    "imageAltText": "About Us Image",
+     "imagePath": "../Assets/Images/image.png"
+  },
+  "aboutUs": {
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower students with quality education, instilling knowledge, skills, and values to succeed in their chosen careers."
+    },
+    "history": {
+      "title": "Our History",
+      "description": "Founded in 2005, the academy has consistently provided a nurturing environment for learners, combining traditional values with modern teaching methods."
+    },
+    "values": {
+      "title": "Our Values",
+      "points": [
+        "Integrity and honesty in all endeavors.",
+        "Fostering innovation and creativity.",
+        "Commitment to lifelong learning."
+      ]
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "members": [
+        {
+          "name": "John Doe",
+          "role": "Founder & Director",
+          "description": "With 20+ years in education, John has been a visionary leader, shaping the academy's philosophy.",
+          "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+          "name": "Jane Smith",
+          "role": "Head of Curriculum",
+          "description": "Jane brings 15 years of experience in curriculum design, focusing on student-centric learning.",
+          "img":"https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+          "name": "Emily Brown",
+          "role": "Senior Instructor",
+          "description": "An expert in teaching methodologies, Emily specializes in engaging students effectively.",
+          "img":"https://plus.unsplash.com/premium_photo-1688740375397-34605b6abe48?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww"
+        }
+      ]
+    }
+  }
+}

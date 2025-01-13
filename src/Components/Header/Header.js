@@ -39,13 +39,13 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#contact" className="nav-link">
-              Contact
+            <a href="/aboutus" className="nav-link">
+              About us
             </a>
           </li>
           <li>
-            <a href="#signup" className="nav-link">
-              Signup
+            <a href="/contact" className="nav-link">
+              Contact
             </a>
           </li>
           <li>

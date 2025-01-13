@@ -14,8 +14,8 @@ const Home = () => {
         <div class="hero-content">
           <h2>Your Course to Success</h2>
           <p>
-            Build skills with courses, certificates, and degrees<br></br> online
-            from world-class universities and companies.
+            Build skills with courses, certificates, and degrees online from
+            world-class universities and companies.
           </p>
           <button>Start now</button>
         </div>
