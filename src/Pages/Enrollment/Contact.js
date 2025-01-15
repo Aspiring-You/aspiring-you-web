@@ -1,109 +1,97 @@
 import React, { useState } from "react";
-import "./Contact.css"; // Import the CSS file for custom styling
+import "./Contact.css";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import contact from "../../Assets/Contact/Contact.json";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: "",
-    repeatPassword: "",
-    agreeTerms: false,
+    telephone: "",
+    message: "",
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    const newValue = type === "checkbox" ? checked : value;
-    setFormData({ ...formData, [name]: newValue });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.password !== formData.repeatPassword) {
-      alert("Passwords do not match");
-      return;
-    }
-    // Handle the form submission logic here
+    alert(contact.form.successMessage);
   };
 
   return (
     <>
       <Header />
-      <section className="contact-section">
+      <div className="contact">
+        Explore our <span style={{ color: "#dd5c3f" }}>Locations</span>!
+        <br></br>
+      </div>
+      <div className="container-contact">
         <div className="contact-container">
-          <div className="contact-card">
-            <div className="form-container">
-              <h1 className="form-title">Sign Up</h1>
+          <h1 className="contact-title">{contact.form.title}</h1>
+          <div className="contact-content">
+            <div className="contact-form">
               <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Your Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="repeatPassword">Confirm Password</label>
-                  <input
-                    type="password"
-                    id="repeatPassword"
-                    name="repeatPassword"
-                    value={formData.repeatPassword}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    id="agreeTerms"
-                    name="agreeTerms"
-                    checked={formData.agreeTerms}
-                    onChange={handleChange}
-                  />
-                  <label htmlFor="agreeTerms">
-                    I agree to all statements in{" "}
-                    <a href="#!">Terms of Service</a>
-                  </label>
-                </div>
-
-                <div className="form-submit">
-                  <button type="submit" className="btn-submit">
-                    Register
-                  </button>
-                </div>
+                {contact.form.fields.map((field) => (
+                  <div className="form-group" key={field.id}>
+                    <label htmlFor={field.id}>{field.label}</label>
+                    {field.type === "textarea" ? (
+                      <textarea
+                        id={field.id}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        rows="4"
+                        value={formData[field.name]}
+                        onChange={handleChange}
+                        required
+                      ></textarea>
+                    ) : (
+                      <input
+                        id={field.id}
+                        name={field.name}
+                        type={field.type}
+                        placeholder={field.placeholder}
+                        value={formData[field.name]}
+                        onChange={handleChange}
+                        required
+                      />
+                    )}
+                  </div>
+                ))}
+                <button type="submit" className="submit-btn">
+                  {contact.form.submitButtonText}
+                </button>
               </form>
+            </div>
+
+            <div className="contact-map">
+              <iframe
+                title="Google Map"
+                src={contact.map.src}
+                style={{ width: "100%", height: "100%", border: "0" }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="contact-icons-container">
+        <div className="icon-row">
+          {contact.icons.map((icon) => (
+            <div className="icon-box" key={icon.type}>
+              <div className="icon-circle">
+                <i className={icon.iconClass}></i>
+              </div>
+              <p>{icon.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
       <Footer />
     </>
   );

@@ -1,0 +1,57 @@
+{
+  "form": {
+    "title": "Contact Us",
+    "successMessage": "Thank you for reaching out. We will get back to you soon!",
+    "submitButtonText": "Contact Us",
+    "fields": [
+      {
+        "id": "form-name",
+        "name": "name",
+        "label": "Name",
+        "type": "text",
+        "placeholder": "Enter your name"
+      },
+      {
+        "id": "form-email",
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Enter your email"
+      },
+      {
+        "id": "form-telephone",
+        "name": "telephone",
+        "label": "Telephone",
+        "type": "text",
+        "placeholder": "Enter your telephone"
+      },
+      {
+        "id": "form-message",
+        "name": "message",
+        "label": "Your Message",
+        "type": "textarea",
+        "placeholder": "Enter your message"
+      }
+    ]
+  },
+  "map": {
+    "src": "https://www.google.com/maps/embed?pb=!1m18..."
+  },
+  "icons": [
+    {
+      "type": "address",
+      "iconClass": "fas fa-map-marker-alt",
+      "text": "123 Academy Lane, Education City, EC 54321"
+    },
+    {
+      "type": "phone",
+      "iconClass": "fas fa-phone-alt",
+      "text": "+1 (555) 123-4567"
+    },
+    {
+      "type": "email",
+      "iconClass": "fas fa-envelope",
+      "text": "info@academy.com"
+    }
+  ]
+}
