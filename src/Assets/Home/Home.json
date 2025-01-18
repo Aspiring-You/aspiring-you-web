@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "title": "Your Course to Success",
+    "description": "Build skills with courses, certificates, and degrees online from world-class universities and companies.",
+    "buttonText": "Start now"
+  },
+  "educationSection": {
+    "heading": "EDUCATION FOR EVERYONE",
+    "subheading": "Affordable Online Courses and Learning Opportunities. Finding your own space and utilizing better learning options can result in faster learning than traditional ways. Enjoy the beauty of eLearning!",
+    "boxes": [
+      {
+        "title": "Learn the Latest Top Skills",
+        "description": "Learning top skills can bring extraordinary outcomes in a career."
+      },
+      {
+        "title": "Learn in Your Own Pace",
+        "description": "Everyone prefers to enjoy learning at their own pace, and that gives great results."
+      },
+      {
+        "title": "Learn From Industry Experts",
+        "description": "Experienced teachers can assist in learning faster with their best approaches!"
+      },
+      {
+        "title": "Enjoy Learning From Anywhere",
+        "description": "We are delighted to give you options to enjoy learning from anywhere in the world."
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "heading": "What Our Students Say",
+    "testimonials": [
+      {
+        "name": "John Doe",
+        "photo": "https://plus.unsplash.com/premium_photo-1688740375397-34605b6abe48?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww"
+,
+        "review": "This academy has transformed my career. The courses are exceptional!"
+      },
+      {
+        "name": "Jane Smith",
+        "photo":          "https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+,        "review": "The instructors are highly knowledgeable and supportive."
+      },
+      {
+        "name": "Mark Wilson",
+        "photo" :"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D",
+       "review": "I love the flexibility of learning at my own pace. Highly recommended!"
+      }
+    ]
+  },
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Understanding React.js",
+      "content": "React.js is a JavaScript library for building user interfaces. It is maintained by Facebook...",
+      "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": 2,
+      "title": "CSS Grid vs Flexbox",
+      "content": "CSS Grid and Flexbox are two powerful layout systems for web design. Understanding their differences...",
+      "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": 3,
+      "title": "Responsive Web Design",
+      "content": "Responsive design is about creating web pages that look good on all devices. This involves...",
+      "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+    }
+  ]
+}
