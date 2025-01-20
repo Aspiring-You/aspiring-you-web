@@ -1,11 +1,22 @@
-/* Global Styles */
-/* body {
-    font-family: 'Montserrat', sans-serif;
+/* Universal Box-Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-} */
+}
 
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    font-family: Arial, sans-serif;
+}
+
+/* Headings */
 h2,
 h3,
 h4 {
@@ -23,6 +34,7 @@ h4 {
     width: 100%;
     gap: 20px;
     flex-wrap: wrap;
+    overflow-x: hidden;
 }
 
 .hero-content {
@@ -41,7 +53,6 @@ h4 {
 
 .hero-svg svg {
     width: 100%;
-    /* Ensure SVG scales within its container */
     max-width: 300px;
     height: auto;
 }
@@ -77,6 +88,7 @@ button:hover {
     background-color: #fdfbf0;
     text-align: center;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .education-section h2 {
@@ -125,12 +137,12 @@ button:hover {
     line-height: 1.5;
 }
 
+/* Testimonials Section */
 .testimonials-section {
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 auto;
     padding: 50px 20px;
-    /* background-color: #f9f9f9; */
+    max-width: 100%;
 }
 
 .testimonials-section h2 {
@@ -152,7 +164,6 @@ button:hover {
     margin: 0 auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative;
 }
 
 .testimonial img {
@@ -163,32 +174,18 @@ button:hover {
     margin-bottom: 15px;
     border: 3px solid #ddd;
     display: block;
-    /* Ensures no inline spacing issues */
-    margin-left: auto;
-    /* Centers horizontally */
-    margin-right: auto;
-    /* Centers horizontally */
-}
-
-.testimonial h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.testimonial p {
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
 }
 
 /* Blog Section */
 .blog-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
+    max-width: 100%;
 }
-.blog-section img{
+
+.blog-section img {
     width: 100%;
 }
 
@@ -233,13 +230,7 @@ button:hover {
     font-size: xx-large;
 }
 
-@media screen and (max-width: 768px) {
-    .blog-section {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media screen and (max-width: 768px) {
     .hero {
         padding: 20px 10px;
@@ -258,7 +249,6 @@ button:hover {
 
     .hero-svg svg {
         max-width: 250px;
-        /* Reduce SVG size for smaller screens */
     }
 
     h2 {
@@ -288,7 +278,6 @@ button:hover {
 
     .testimonials-section {
         padding: 15px;
-        margin: 0;
     }
 
     .testimonial {
@@ -311,14 +300,6 @@ button:hover {
 }
 
 @media screen and (max-width: 480px) {
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
     .hero-content {
         text-align: center;
     }
@@ -331,19 +312,8 @@ button:hover {
         max-width: 200px;
     }
 
-    .education-box h3 {
-        font-size: 16px;
-    }
-
-    .education-box p {
-        font-size: 14px;
-    }
-    .testimonials-section h2{
-        margin-top: 60px;
-        font-size: 30px;
-    }
-    .blog-container h2{
-        margin-top: 60px;
-        font-size: 30px;
+    .testimonials-section h2,
+    .blog-container h2 {
+        font-size: 1.8rem;
     }
 }

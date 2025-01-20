@@ -9,10 +9,6 @@ import course from "../../Assets/CourseData/Course.json";
 const Coursepage = () => {
   const [filteredCourses, setFilteredCourses] = useState(course);
 
-  // Recommended and New Courses
-  const recommendedCourses = course.slice(0, 5);
-  const newCourses = course.slice(5, 10);
-
   const handleFilterApply = (filters) => {
     const { category, price, level } = filters;
 
@@ -37,6 +33,10 @@ const Coursepage = () => {
     setFilteredCourses(filtered);
   };
 
+  // Recommended and New Courses based on filter
+  const recommendedCourses = filteredCourses.slice(0, 5); // First 5 courses after filtering
+  const newCourses = filteredCourses.slice(5, 10); // Next 5 courses after filtering
+
   return (
     <>
       <Header />
@@ -44,25 +44,29 @@ const Coursepage = () => {
         <div className="sidebar">
           <Filters onFilterApply={handleFilterApply} />
         </div>
-        <div className="content">
+        <div className="courses-content">
           <h2>Recommended Courses</h2>
           <div className="courses-grid">
-            {recommendedCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
+            {recommendedCourses.length > 0 ? (
+              recommendedCourses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))
+            ) : (
+              <p>
+                No courses match the selected filters in Recommended Courses.
+              </p>
+            )}
           </div>
           <h2>New Courses</h2>
           <div className="courses-grid">
-            {newCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
+            {newCourses.length > 0 ? (
+              newCourses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))
+            ) : (
+              <p>No courses match the selected filters in New Courses.</p>
+            )}
           </div>
-          {/* <h2>All Available Courses</h2>
-          <div className="courses-grid">
-            {filteredCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div> */}
         </div>
       </div>
       <Footer />

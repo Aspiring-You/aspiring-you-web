@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import "./Filters.css";
 
 const Filters = ({ onFilterApply }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 760);
+
   const [filters, setFilters] = useState({
     category: "",
     price: "",
     level: "",
   });
+
+  // Update screen size state on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      const smallScreen = window.innerWidth <= 760;
+      setIsSmallScreen(smallScreen);
+      if (!smallScreen) {
+        setIsSidebarOpen(true); // Always show filters on large screens
+      } else {
+        setIsSidebarOpen(false); // Default to closed for small screens
+      }
+    };
+
+    handleResize(); // Initial check on component mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -17,25 +37,27 @@ const Filters = ({ onFilterApply }) => {
   };
 
   const applyFilters = () => {
-    setIsSidebarOpen(false);
+    if (isSmallScreen) {
+      setIsSidebarOpen(false); // Close sidebar after applying on small screens
+    }
     onFilterApply(filters);
   };
 
   return (
-    <>
-      {/* Filter Button - Visible only on smaller screens */}
-      <button
-        className="toggle-button"
-        onClick={() => setIsSidebarOpen(true)}
-        style={{ display: window.innerWidth <= 768 ? "inline-block" : "none" }}
-      >
-        Open Filters
-      </button>
+    <div className="filters-container">
+      {/* Hamburger Icon for Small Screens */}
+      {isSmallScreen && (
+        <button
+          className="hamburger-icon"
+          onClick={() => setIsSidebarOpen((prev) => !prev)}
+        >
+          &#9776; Filters
+        </button>
+      )}
 
-      {/* Sidebar - Contains filters */}
-      <div className={`filters-sidebar ${isSidebarOpen ? "open" : ""}`}>
-        <div className="filters-content">
-          <h3>Filters</h3>
+      {/* Filters Sidebar */}
+      {(isSidebarOpen || !isSmallScreen) && (
+        <div className="filters-row">
           <div className="filter-section">
             <label>Category:</label>
             <select
@@ -74,10 +96,12 @@ const Filters = ({ onFilterApply }) => {
               <option value="advanced">Advanced</option>
             </select>
           </div>
-          <button onClick={applyFilters}>Apply Filters</button>
+          <button className="apply-button" onClick={applyFilters}>
+            Apply Filters
+          </button>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
