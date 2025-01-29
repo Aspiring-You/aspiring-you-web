@@ -1,11 +1,11 @@
 /* Universal Box-Sizing */
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
 /* Global Styles */
 body {
@@ -89,6 +89,8 @@ button:hover {
     text-align: center;
     margin: 0 auto;
     max-width: 100%;
+    margin-top: 50px;
+
 }
 
 .education-section h2 {
@@ -143,6 +145,7 @@ button:hover {
     margin: 0 auto;
     padding: 50px 20px;
     max-width: 100%;
+        margin-top: 50px;
 }
 
 .testimonials-section h2 {
@@ -151,32 +154,39 @@ button:hover {
     font-weight: 600;
 }
 
-.testimonial {
+.testimonials {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: white;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: white;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
 }
 
-.testimonial img {
+.testimonials img {
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #ddd;
-    display: block;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+        /* Add this */
+        border: 3px solid #ddd;
+        display: block;
+        /* Ensure it behaves as a block-level element */
 }
 
 /* Blog Section */
+.blog-container {
+    text-align: center;
+    align-items: center;
+    margin-top: 70px;
+}
 .blog-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -220,16 +230,14 @@ button:hover {
     margin-left: 5px;
 }
 
-.blog-container {
-    text-align: center;
-    align-items: center;
-}
 
 .blog-container h2 {
     font-weight: 600;
     font-size: xx-large;
 }
-
+faq{
+    margin-top: 50px;
+}
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .hero {
@@ -280,21 +288,21 @@ button:hover {
         padding: 15px;
     }
 
-    .testimonial {
+    .testimonials {
         max-width: 95%;
         padding: 15px;
     }
 
-    .testimonial img {
+    .testimonials img {
         width: 60px;
         height: 60px;
     }
 
-    .testimonial h3 {
+    .testimonials h3 {
         font-size: 16px;
     }
 
-    .testimonial p {
+    .testimonials p {
         font-size: 12px;
     }
 }

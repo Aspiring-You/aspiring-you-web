@@ -1,0 +1,44 @@
+{
+  "brand": {
+    "name": "AY Academy",
+    "description": "Working to bring significant changes in online-based learning by doing extensive research for course curriculum preparation, student engagements, and looking forward to the flexible education!"
+  },
+  "socialLinks": [
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com",
+      "icon": "faTwitter"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com",
+      "icon": "faYoutube"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com",
+      "icon": "faFacebook"
+    }
+  ],
+  "exploreLinks": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about" },
+    { "label": "Courses", "url": "/courses" },
+    { "label": "Events", "url": "/events" },
+    { "label": "Contact", "url": "/contact" }
+  ],
+  "resourcesLinks": [
+    { "label": "Student Success", "url": "/success" },
+    { "label": "Scholarships", "url": "/scholarships" },
+    { "label": "For Business", "url": "/business" },
+    { "label": "Go Premium", "url": "/premium" },
+    { "label": "Team Plans", "url": "/team-plans" }
+  ],
+  "address": {
+    "line1": "2750 Quadra Street Golden Victoria Road, New York, USA",
+    "phone1": "+1 (123) 456 7890",
+    "email": "hello@odemy.com",
+    "phone2": "+55 785 4578964"
+  },
+  "footerInfo": "&copy; AY Academy created with Love"
+}

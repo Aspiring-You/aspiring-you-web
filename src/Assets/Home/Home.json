@@ -51,20 +51,21 @@
     {
       "id": 1,
       "title": "Understanding React.js",
-      "content": "React.js is a JavaScript library for building user interfaces. It is maintained by Facebook...",
-      "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+      "content": "React.js is a JavaScript library for building user interfaces. It is maintained by Facebook. React was created by Jordan Walke, a software engineer at Meta, who initially developed a prototype called 'F-Bolt' before later renaming it to 'FaxJS'. This early version is documented in Jordan Walke's GitHub repository. Influences for the project included XHP, an HTML component library for PHP. React was first deployed on Facebook's News Feed in 2011 and subsequently integrated into Instagram in 2012. In May 2013, at JSConf US, the project was officially open-sourced, marking a significant turning point in its adoption and growth. React Native, which enables native Android, iOS, and UWP development with React, was announced at Facebook's React Conf in February 2015 and open-sourced in March 2015. React's rendering system, React Fiber, was released in 2017 to improve the efficiency and performance of rendering updates. React continues to evolve and become the most widely used JavaScript framework for building dynamic and responsive web applications. Whether you are building a simple website or a complex enterprise-level application, React provides the tools and features you need to build modern, scalable user interfaces.",
+      "img": "https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
       "id": 2,
       "title": "CSS Grid vs Flexbox",
-      "content": "CSS Grid and Flexbox are two powerful layout systems for web design. Understanding their differences...",
-      "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+      "content": "CSS Grid and Flexbox are two powerful layout systems for web design. They both provide tools to create responsive layouts, but they do so in different ways. Flexbox is a one-dimensional layout system, meaning that it deals with either rows or columns at a time. It's great for smaller components or when the layout is relatively simple, such as a navigation bar or a list of items. On the other hand, CSS Grid is a two-dimensional layout system, which means it can handle both rows and columns simultaneously. It's perfect for creating complex layouts, such as grids of items, and allows for more control over how the content is placed within the layout. Both systems have their strengths, and understanding when to use each one will help you build better, more efficient layouts. CSS Grid is generally recommended when you need to create complex designs, while Flexbox works well for simpler, more straightforward layouts. It's also worth mentioning that you can use both systems together, combining the flexibility of Flexbox with the precision of CSS Grid to create stunning, responsive web designs.",
+      "img": "https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
       "id": 3,
       "title": "Responsive Web Design",
-      "content": "Responsive design is about creating web pages that look good on all devices. This involves...",
-      "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+      "content": "Responsive design is about creating web pages that look good on all devices, regardless of screen size or resolution. With the growing number of devices and screen sizes, it's essential to ensure that websites adjust seamlessly to the user's device. Responsive web design achieves this by using fluid grids, flexible images, and media queries. Fluid grids allow elements to resize dynamically based on the screen width, ensuring that content is always visible and accessible. Flexible images automatically adjust their size, preventing them from overflowing or becoming distorted on different devices. Media queries are used to apply different styles based on the characteristics of the device, such as its width, height, and orientation. By using these techniques, responsive web design allows you to create websites that provide an optimal viewing experience across a wide range of devices, from mobile phones to desktop computers. This approach improves usability and accessibility, leading to better user experiences and higher engagement. In today's mobile-first world, responsive web design is a critical component of any web development strategy.",
+      "img": "https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
     }
   ]
+
 }

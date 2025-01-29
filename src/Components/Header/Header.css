@@ -42,6 +42,12 @@
     font-size: 1rem;
     font-weight: 500;
 }
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #dd5c3f;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
 
 /* Mobile Menu Icon */
 .mobile-menu-icon {

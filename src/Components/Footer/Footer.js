@@ -6,77 +6,73 @@ import {
   faYoutube,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import footerData from "../../Assets/Footer/Footer.json"; // Import the JSON file
 
 const Footer = () => {
+  const iconMap = {
+    faTwitter,
+    faYoutube,
+    faFacebook,
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
+        {/* Brand Section */}
         <div className="footer-col footer-logo">
-          <h2>Brandname</h2>
-          <p>
-            Working to bring significant changes in online-based learning by
-            doing extensive research for course curriculum preparation, student
-            engagements, and looking forward to the flexible education!
-          </p>
+          <h2>{footerData.brand.name}</h2>
+          <p>{footerData.brand.description}</p>
 
           {/* Social Media Icons */}
           <div className="social-icons">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
+            {footerData.socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={iconMap[link.icon]} />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Explore Links (center column) */}
+        {/* Explore Links */}
         <div className="footer-col footer-links">
           <h4>Explore</h4>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/courses">Courses</a>
-          <a href="/events">Events</a>
-          <a href="/contact">Contact</a>
+          {footerData.exploreLinks.map((link, index) => (
+            <a key={index} href={link.url}>
+              {link.label}
+            </a>
+          ))}
         </div>
 
-        {/* Resources Links (center column) */}
+        {/* Resources Links */}
         <div className="footer-col footer-links">
           <h4>Resources</h4>
-          <a href="/success">Student Success</a>
-          <a href="/scholarships">Scholarships</a>
-          <a href="/business">For Business</a>
-          <a href="/premium">Go Premium</a>
-          <a href="/team-plans">Team Plans</a>
+          {footerData.resourcesLinks.map((link, index) => (
+            <a key={index} href={link.url}>
+              {link.label}
+            </a>
+          ))}
         </div>
 
-        {/* Address & Contact Information (right column) */}
+        {/* Address Section */}
         <div className="footer-col footer-address">
           <h4>Address</h4>
-          <p>2750 Quadra Street Golden Victoria Road, New York, USA</p>
-          <p>+1 (123) 456 7890</p>
-          <p>hello@odemy.com</p>
-          <p>+55 785 4578964</p>
+          <p>{footerData.address.line1}</p>
+          <p>{footerData.address.phone1}</p>
+          <p>{footerData.address.email}</p>
+          <p>{footerData.address.phone2}</p>
         </div>
       </div>
 
       {/* Footer Information */}
-      <div className="footer-info">&copy; AY Academy created with Love</div>
+      <div
+        className="footer-info"
+        dangerouslySetInnerHTML={{ __html: footerData.footerInfo }}
+      />
     </footer>
   );
 };

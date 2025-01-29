@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom"; // Import useLocation
 import "./Header.css";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const location = useLocation(); // Hook to get the current location
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,35 +25,68 @@ const Header = () => {
     setIsMobile(!isMobile);
   };
 
+  // Handle the Blog link click
+  const handleBlogClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      // If on the Home page, scroll to the blog section
+      document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If on other pages, do nothing or redirect to the Home page
+      window.location.href = "/"; // Or use `navigate("/")` to navigate to the Home page
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <h3 className="logo">AY ACADEMY</h3>
         <ul className={isMobile ? "nav-links-mobile open" : "nav-links"}>
           <li>
-            <a href="/" className="nav-link">
+            <NavLink
+              to="/"
+              className="nav-link"
+              activeClassName="active-link"
+              exact
+            >
               Home
+            </NavLink>
+          </li>
+          <li>
+            <a
+              href="#blog"
+              className="nav-link"
+              onClick={handleBlogClick} // Use the new click handler
+            >
+              Blog
             </a>
           </li>
           <li>
-            <a href="/courses" className="nav-link">
+            <NavLink
+              to="/courses"
+              className="nav-link"
+              activeClassName="active-link"
+            >
               Courses
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/aboutus" className="nav-link">
+            <NavLink
+              to="/aboutus"
+              className="nav-link"
+              activeClassName="active-link"
+            >
               About us
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/contact" className="nav-link">
+            <NavLink
+              to="/contact"
+              className="nav-link"
+              activeClassName="active-link"
+            >
               Contact
-            </a>
-          </li>
-          <li>
-            <a href="#login" className="nav-link">
-              Login
-            </a>
+            </NavLink>
           </li>
         </ul>
         <div className="mobile-menu-icon" onClick={toggleMobileMenu}>

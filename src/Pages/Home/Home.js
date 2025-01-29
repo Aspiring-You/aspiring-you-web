@@ -3,6 +3,7 @@ import "./Home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import Faq from "../../Components/Faq/Faq";
@@ -56,7 +57,7 @@ const Home = () => {
         <h2>{testimonialsSection.heading}</h2>
         <Slider {...sliderSettings}>
           {testimonialsSection.testimonials.map((testimonial, index) => (
-            <div className="testimonial" key={index}>
+            <div className="testimonials" key={index}>
               <img src={testimonial.photo} alt={testimonial.name} />
               <h3>{testimonial.name}</h3>
               <p>{testimonial.review}</p>
@@ -66,7 +67,7 @@ const Home = () => {
       </section>
 
       {/* Blog Post Section */}
-      <section className="blog-container">
+      <section id="blog" className="blog-container">
         <h2>
           Read our <span style={{ color: "#dd5c3f" }}>Recent Blogs</span>
         </h2>
@@ -76,8 +77,12 @@ const Home = () => {
               <img src={blog.img} alt={blog.title} className="blog-image" />
               <h3 className="blog-title">{blog.title}</h3>
               <p className="blog-content">
-                {blog.content}
-                <span className="read-more">Read More</span>
+                {blog.content.length > 100
+                  ? blog.content.substring(0, 100) + "..."
+                  : blog.content}
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
               </p>
             </div>
           ))}
