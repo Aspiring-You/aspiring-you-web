@@ -1,11 +1,12 @@
 /* Universal Box-Sizing */
-/* *,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-} */
+    /* max-width: 100vw; */
+}
 
 /* Global Styles */
 body {
@@ -31,7 +32,8 @@ h4 {
     padding: 20px 15px;
     max-width: 100%;
     margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
+    max-width: 100vw;
     gap: 20px;
     flex-wrap: wrap;
     overflow-x: hidden;
@@ -88,7 +90,7 @@ button:hover {
     background-color: #fdfbf0;
     text-align: center;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 100vw;
     margin-top: 50px;
 
 }
@@ -144,8 +146,8 @@ button:hover {
     text-align: center;
     margin: 0 auto;
     padding: 50px 20px;
-    max-width: 100%;
-        margin-top: 50px;
+    max-width: 100vw;
+    margin-top: 50px;
 }
 
 .testimonials-section h2 {
@@ -156,29 +158,29 @@ button:hover {
 
 .testimonials {
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background-color: white;
-        max-width: 600px;
-        margin: 0 auto;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .testimonials img {
     width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto;
-        /* Add this */
-        border: 3px solid #ddd;
-        display: block;
-        /* Ensure it behaves as a block-level element */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    /* Add this */
+    border: 3px solid #ddd;
+    display: block;
+    /* Ensure it behaves as a block-level element */
 }
 
 /* Blog Section */
@@ -187,12 +189,13 @@ button:hover {
     align-items: center;
     margin-top: 70px;
 }
+
 .blog-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 .blog-section img {
@@ -235,29 +238,50 @@ button:hover {
     font-weight: 600;
     font-size: xx-large;
 }
-faq{
-    margin-top: 50px;
-}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
-    .hero {
-        padding: 20px 10px;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-svg {
-        max-width: 80%;
-    }
-
-    .hero-svg svg {
-        max-width: 250px;
-    }
+        .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .hero-content,
+            .hero-svg {
+                max-width: 100%;
+            }
+        
+            .hero-svg svg {
+                width: 100%;
+                    max-width: 300px;
+            }
+        
+            .education-boxes {
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .education-box {
+                min-width: 100%;
+            }
+        
+            .testimonials-section {
+                padding: 15px;
+            }
+        
+            .testimonials {
+                max-width: 95%;
+                padding: 15px;
+            }
+        
+            .testimonials img {
+                width: 80px;
+                height: 80px;
+            }
+        
+            .blog-section {
+                grid-template-columns: 1fr;
+            }
 
     h2 {
         font-size: 1.5rem;
@@ -323,5 +347,8 @@ faq{
     .testimonials-section h2,
     .blog-container h2 {
         font-size: 1.8rem;
+    }
+    .blog-container h3{
+        font-size: 1.3rem;
     }
 }
