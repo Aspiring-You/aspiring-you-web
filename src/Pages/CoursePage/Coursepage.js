@@ -4,15 +4,22 @@ import Filters from "../../Components/Filters/Filters";
 import CourseCard from "../../Components/Coursecard/Coursecard";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
-import course from "../../Assets/CourseData/Course.json";
+import courseData from "../../Assets/CourseData/Course.json";
 
 const Coursepage = () => {
-  const [filteredCourses, setFilteredCourses] = useState(course);
+  // Extract recommended and new courses from the JSON
+  const { recommendedCourses, newCourses } = courseData;
+
+  // State to hold filtered courses
+  const [filteredRecommended, setFilteredRecommended] =
+    useState(recommendedCourses);
+  const [filteredNew, setFilteredNew] = useState(newCourses);
 
   const handleFilterApply = (filters) => {
     const { category, price, level } = filters;
 
-    const filtered = course.filter((course) => {
+    // Filtering logic for recommended courses
+    const filteredRec = recommendedCourses.filter((course) => {
       const categoryMatch = category
         ? course.category &&
           course.category.toLowerCase() === category.toLowerCase()
@@ -30,12 +37,28 @@ const Coursepage = () => {
       return categoryMatch && priceMatch && levelMatch;
     });
 
-    setFilteredCourses(filtered);
-  };
+    // Filtering logic for new courses
+    const filteredNewCourses = newCourses.filter((course) => {
+      const categoryMatch = category
+        ? course.category &&
+          course.category.toLowerCase() === category.toLowerCase()
+        : true;
+      const priceMatch =
+        price === "free"
+          ? course.price && course.price.toLowerCase() === "free"
+          : price === "paid"
+          ? course.price && course.price.toLowerCase() !== "free"
+          : true;
+      const levelMatch = level
+        ? course.level && course.level.toLowerCase() === level.toLowerCase()
+        : true;
 
-  // Recommended and New Courses based on filter
-  const recommendedCourses = filteredCourses.slice(0, 5); // First 5 courses after filtering
-  const newCourses = filteredCourses.slice(5, 10); // Next 5 courses after filtering
+      return categoryMatch && priceMatch && levelMatch;
+    });
+
+    setFilteredRecommended(filteredRec);
+    setFilteredNew(filteredNewCourses);
+  };
 
   return (
     <>
@@ -47,8 +70,8 @@ const Coursepage = () => {
         <div className="courses-content">
           <h2>Recommended Courses</h2>
           <div className="courses-grid">
-            {recommendedCourses.length > 0 ? (
-              recommendedCourses.map((course) => (
+            {filteredRecommended.length > 0 ? (
+              filteredRecommended.map((course) => (
                 <CourseCard key={course.id} course={course} />
               ))
             ) : (
@@ -59,8 +82,8 @@ const Coursepage = () => {
           </div>
           <h2>New Courses</h2>
           <div className="courses-grid">
-            {newCourses.length > 0 ? (
-              newCourses.map((course) => (
+            {filteredNew.length > 0 ? (
+              filteredNew.map((course) => (
                 <CourseCard key={course.id} course={course} />
               ))
             ) : (

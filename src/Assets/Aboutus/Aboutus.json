@@ -1,26 +1,9 @@
 {
-  "hero": {
-    "heading": "We're here for you",
-    "subheading": "no matter where you are",
-    "imageAltText": "About Us Image",
-     "imagePath": "../Assets/Images/image.png"
-  },
+  
   "aboutUs": {
     "mission": {
       "title": "Our Mission",
       "description": "To empower students with quality education, instilling knowledge, skills, and values to succeed in their chosen careers."
-    },
-    "history": {
-      "title": "Our History",
-      "description": "Founded in 2005, the academy has consistently provided a nurturing environment for learners, combining traditional values with modern teaching methods."
-    },
-    "values": {
-      "title": "Our Values",
-      "points": [
-        "Integrity and honesty in all endeavors.",
-        "Fostering innovation and creativity.",
-        "Commitment to lifelong learning."
-      ]
     },
     "team": {
       "title": "Meet Our Team",
@@ -44,6 +27,12 @@
           "img":"https://plus.unsplash.com/premium_photo-1688740375397-34605b6abe48?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww"
         }
       ]
+    },
+    "hero": {
+    "heading": "We're here for you",
+    "subheading": "no matter where you are",
+    "imageAltText": "About Us Image",
+     "imagePath": "../Assets/Images/image.png"
     }
   }
 }

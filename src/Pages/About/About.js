@@ -9,9 +9,19 @@ import resolvedImagePath from "../../Assets/Images/image.png";
 import aboutimage from "../../Assets/Images/aboutus.png";
 
 const About = () => {
-  const { hero, aboutUs } = content;
-  const { heading, subheading, imageAltText } = hero;
-  const { mission, team } = aboutUs;
+  if (!content || !content.aboutUs) {
+    console.error("Error: AboutUs content is missing.");
+    return <div>Error loading content. Please check your data.</div>;
+  }
+
+  // Extract data with fallback values
+  const { aboutUs } = content;
+  const { hero = {}, mission = {}, team = {} } = aboutUs;
+  const {
+    heading = "Welcome",
+    subheading = "",
+    imageAltText = "About Us Image",
+  } = hero;
 
   return (
     <>
@@ -27,7 +37,7 @@ const About = () => {
             <h2>
               OUR <span style={{ color: "#dd5c3f" }}>MISSION</span>
             </h2>
-            <p>{mission.description}</p>
+            <p>{mission.description || "No mission description available."}</p>
           </div>
         </div>
       </section>
@@ -39,16 +49,20 @@ const About = () => {
             OUR <span style={{ color: "#dd5c3f" }}>TEAM</span>
           </h2>
           <div className="team-members">
-            {team.members.map((member, index) => (
-              <div key={index} className="team-card">
-                <img src={member.img}></img>
-                <h3>{member.name}</h3>
-                <p>
-                  <strong>{member.role}</strong>
-                </p>
-                <p>{member.description}</p>
-              </div>
-            ))}
+            {team.members && team.members.length > 0 ? (
+              team.members.map((member, index) => (
+                <div key={index} className="team-card">
+                  <img src={member.img} alt={member.name} />
+                  <h3>{member.name}</h3>
+                  <p>
+                    <strong>{member.role}</strong>
+                  </p>
+                  <p>{member.description}</p>
+                </div>
+              ))
+            ) : (
+              <p>No team members available.</p>
+            )}
           </div>
         </div>
       </section>
