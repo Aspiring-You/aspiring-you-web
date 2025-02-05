@@ -59,7 +59,6 @@ const Home = () => {
           {testimonialsSection.testimonials.map((testimonial, index) => (
             <div className="testimonials" key={index}>
               <img src={testimonial.photo} alt={testimonial.name} />
-                <br/>
               <h3>{testimonial.name}</h3>
               <p>{testimonial.review}</p>
             </div>
