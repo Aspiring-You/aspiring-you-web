@@ -25,10 +25,10 @@ const Contact = () => {
   return (
     <>
       <Header />
-      <div className="contact">
+      {/* <div className="contact">
         Explore our <span style={{ color: "#dd5c3f" }}>Locations</span>!
         <br></br>
-      </div>
+      </div> */}
       <div className="container-contact">
         <div className="contact-container">
           <h1 className="contact-title">{contact.form.title}</h1>

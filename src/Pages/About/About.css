@@ -63,6 +63,36 @@ body {
     line-height: 1.6;
 }
 
+/* Why Stand Out Section */
+.why-standout {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-standout h2 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.why-standout p {
+    font-size: 1.1rem;
+    color: #3a3939;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.standout-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 /* Team Members Section */
 .aboutus-card {
     text-align: center;
@@ -102,7 +132,7 @@ body {
 
 .team-card strong {
     font-weight: bold;
-    color: #dd5c3f;
+    color: #000000;
 }
 
 /* Mission Section */
@@ -207,4 +237,9 @@ body {
     .team-card p {
         font-size: 14px;
     }
+        .standout-features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 }

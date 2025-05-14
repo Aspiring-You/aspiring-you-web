@@ -5,13 +5,11 @@ const CourseCard = ({ course }) => {
     <div className="course-card">
       <img src={course.image} alt={course.title} />
       <h4>{course.title}</h4>
-      <p>{course.description}</p>
-      <p>
+      {/* <p>{course.description}</p> */}
+      {/* <p>
         <strong>Price:</strong> {course.price}
-      </p>
-      <p>
-        <strong>Level:</strong> {course.level}
-      </p>
+      </p> */}
+      <p>{course.domain}</p>
     </div>
   );
 };

@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom"; // Import useLocation
+import { NavLink, useLocation } from "react-router-dom";
+import { ReactComponent as LogoSVG } from "../../Assets/Images/logo.svg";
 import "./Header.css";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const location = useLocation(); // Hook to get the current location
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth > 768) {
-        setIsMobile(false); // Reset mobile view when the window is resized above 768px
+        setIsMobile(false);
       }
     };
 
@@ -28,23 +29,24 @@ const Header = () => {
   // Handle the Blog link click
   const handleBlogClick = (e) => {
     e.preventDefault();
-    if (location.pathname === "/") {
-      // If on the Home page, scroll to the blog section
+    if (location.pathname === "/ay_academy") {
       document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
     } else {
-      // If on other pages, do nothing or redirect to the Home page
-      window.location.href = "/"; // Or use `navigate("/")` to navigate to the Home page
+      window.location.href = "/ay_academy";
     }
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <h3 className="logo">AY ACADEMY</h3>
+        <div className="logo">
+          <LogoSVG />
+        </div>
+
         <ul className={isMobile ? "nav-links-mobile open" : "nav-links"}>
           <li>
             <NavLink
-              to="/"
+              to="/ay_academy"
               className="nav-link"
               activeClassName="active-link"
               exact
@@ -53,11 +55,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <a
-              href="#blog"
-              className="nav-link"
-              onClick={handleBlogClick} // Use the new click handler
-            >
+            <a href="#blog" className="nav-link" onClick={handleBlogClick}>
               Blog
             </a>
           </li>

@@ -6,7 +6,8 @@
       "description": "Learn the basics of React.js.",
       "price": "Free",
       "level": "Beginner",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Web Development",
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "description": "Master JavaScript with advanced topics.",
       "price": "$49",
       "level": "Advanced",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Web Development",
+      "image": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "description": "Learn how to design stunning user interfaces.",
       "price": "$99",
       "level": "Intermediate",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Design",
+      "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "description": "Get started with data analysis and visualization using Python.",
       "price": "$79",
       "level": "Intermediate",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Data Science",
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "description": "Understand the basics of securing systems and data.",
       "price": "$29",
       "level": "Beginner",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Cybersecurity",
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
     }
   ],
   "newCourses": [
@@ -48,7 +53,8 @@
       "description": "Learn to capture stunning photos like a pro.",
       "price": "$59",
       "level": "Beginner",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Photography",
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
     },
     {
       "id": 7,
@@ -56,7 +62,8 @@
       "description": "Master SEO, SEM, and social media marketing.",
       "price": "$89",
       "level": "Advanced",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Marketing",
+      "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43"
     },
     {
       "id": 8,
@@ -64,7 +71,8 @@
       "description": "Learn how to produce your own music tracks.",
       "price": "$39",
       "level": "Beginner",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Music",
+      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4"
     },
     {
       "id": 9,
@@ -72,7 +80,8 @@
       "description": "Understand the fundamentals of a healthy lifestyle.",
       "price": "Free",
       "level": "Beginner",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Health & Wellness",
+      "image": "https://images.unsplash.com/photo-1514996937319-344454492b37"
     },
     {
       "id": 10,
@@ -80,7 +89,8 @@
       "description": "Dive into machine learning concepts using Python.",
       "price": "$99",
       "level": "Advanced",
-      "image": "https://via.placeholder.com/150"
+      "domain": "Artificial Intelligence",
+      "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a"
     }
   ]
 }

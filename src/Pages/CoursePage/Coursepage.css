@@ -1,9 +1,6 @@
-/* Coursepage.css */
-
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  /* background-color: #f9f9f9; */
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .courses-page {
@@ -15,7 +12,6 @@ body {
 
 .sidebar {
     width: 100%;
-    /* background-color: #fff; */
     padding: 15px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -26,21 +22,21 @@ body {
 }
 
 .sidebar button {
-    background-color: #dd5c3f;
-    /* color: #fff; */
+    background-color: #4e4e4e;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: white;
 }
 
 .sidebar button:hover {
-    background-color: #db8875;
+    background-color: #000000;
 }
 
 .sidebar button:active {
-    background-color: #004080;
+    background-color: black;
 }
 
 .courses-content {
@@ -72,21 +68,20 @@ body {
 
 .course-card {
     background-color: #fff;
-    /* border: 1px solid #ddd; */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.course-card:hover {
-    /* transform: translateY(-5px); */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
-}
-
+/* Ensuring all images are the same size */
 .course-card img {
-    max-width: 100%;
+    width: 100%;
+    height: 180px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    /* Ensures images fill the space without distortion */
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -101,7 +96,6 @@ body {
     font-size: 14px;
     text-align: center;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -135,6 +129,6 @@ body {
     }
 
     .course-card {
-        padding: 0px;
+        padding: 10px;
     }
 }

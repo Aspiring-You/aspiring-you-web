@@ -16,7 +16,12 @@ const About = () => {
 
   // Extract data with fallback values
   const { aboutUs } = content;
-  const { hero = {}, mission = {}, team = {} } = aboutUs;
+  const {
+    hero = {},
+    mission = {},
+    team = {},
+    whyStandoutSection = {},
+  } = aboutUs;
   const {
     heading = "Welcome",
     subheading = "",
@@ -35,9 +40,32 @@ const About = () => {
           </div>
           <div>
             <h2>
-              OUR <span style={{ color: "#dd5c3f" }}>MISSION</span>
+              OUR <span>MISSION</span>
             </h2>
             <p>{mission.description || "No mission description available."}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="why-standout">
+        <div className="container">
+          <h2>{whyStandoutSection?.heading || "Why Standout with Us?"}</h2>
+          <p>
+            {whyStandoutSection?.subheading ||
+              "We offer unique benefits that help you achieve your career goals efficiently."}
+          </p>
+          <div className="standout-features">
+            {whyStandoutSection?.features?.length > 0 ? (
+              whyStandoutSection.features.map((feature, index) => (
+                <div className="feature-box" key={index}>
+                  <img src={feature?.icon} alt={feature?.title} />
+                  <h3>{feature?.title || "Feature Title"}</h3>
+                  <p>{feature?.description || "Feature description."}</p>
+                </div>
+              ))
+            ) : (
+              <p>No features available.</p>
+            )}
           </div>
         </div>
       </section>
@@ -46,7 +74,7 @@ const About = () => {
       <section>
         <div className="aboutus-card">
           <h2>
-            OUR <span style={{ color: "#dd5c3f" }}>TEAM</span>
+            OUR <span>TEAM</span>
           </h2>
           <div className="team-members">
             {team.members && team.members.length > 0 ? (
@@ -67,7 +95,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Hero Section */}
+      {/* Hero Section
       <section className="aboutus-hero">
         <div className="aboutus-start">
           <h2>
@@ -77,7 +105,7 @@ const About = () => {
           </h2>
           <img src={resolvedImagePath} alt={imageAltText} />
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </>

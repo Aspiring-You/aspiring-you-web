@@ -1,5 +1,4 @@
 {
-  
   "aboutUs": {
     "mission": {
       "title": "Our Mission",
@@ -12,27 +11,53 @@
           "name": "John Doe",
           "role": "Founder & Director",
           "description": "With 20+ years in education, John has been a visionary leader, shaping the academy's philosophy.",
-          "img":"https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+          "img": "https://images.unsplash.com/photo-1557862921-37829c790f19?fm=jpg&q=60&w=3000"
         },
         {
           "name": "Jane Smith",
           "role": "Head of Curriculum",
           "description": "Jane brings 15 years of experience in curriculum design, focusing on student-centric learning.",
-          "img":"https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+          "img": "https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?fm=jpg&q=60&w=3000"
         },
         {
           "name": "Emily Brown",
           "role": "Senior Instructor",
           "description": "An expert in teaching methodologies, Emily specializes in engaging students effectively.",
-          "img":"https://plus.unsplash.com/premium_photo-1688740375397-34605b6abe48?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww"
+          "img": "https://plus.unsplash.com/premium_photo-1688740375397-34605b6abe48?fm=jpg&q=60&w=3000"
         }
       ]
     },
     "hero": {
-    "heading": "We're here for you",
-    "subheading": "no matter where you are",
-    "imageAltText": "About Us Image",
-     "imagePath": "../Assets/Images/image.png"
+      "heading": "We're here for you",
+      "subheading": "no matter where you are",
+      "imageAltText": "About Us Image",
+      "imagePath": "../Assets/Images/image.png"
+    },
+    "whyStandoutSection": {
+      "heading": "Why Standout with Us?",
+      "subheading": "We offer unique benefits that help you achieve your career goals efficiently.",
+      "features": [
+        {
+          "title": "Expert Instructors",
+          "description": "Learn from industry professionals with real-world experience.",
+          "icon": "https://cdn-icons-png.flaticon.com/512/1903/1903162.png"
+        },
+        {
+          "title": "Flexible Learning",
+          "description": "Study at your own pace with a variety of learning options.",
+          "icon": "https://cdn-icons-png.flaticon.com/512/1157/1157109.png"
+        },
+        {
+          "title": "Industry Recognized Certificates",
+          "description": "Boost your resume with certificates from top institutions.",
+          "icon": "https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+        },
+        {
+          "title": "Affordable Pricing",
+          "description": "Access high-quality education at a price that fits your budget.",
+          "icon": "https://cdn-icons-png.flaticon.com/512/2331/2331970.png"
+        }
+      ]
     }
   }
 }

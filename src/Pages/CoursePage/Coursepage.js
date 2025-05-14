@@ -7,10 +7,8 @@ import Footer from "../../Components/Footer/Footer";
 import courseData from "../../Assets/CourseData/Course.json";
 
 const Coursepage = () => {
-  // Extract recommended and new courses from the JSON
   const { recommendedCourses, newCourses } = courseData;
 
-  // State to hold filtered courses
   const [filteredRecommended, setFilteredRecommended] =
     useState(recommendedCourses);
   const [filteredNew, setFilteredNew] = useState(newCourses);
