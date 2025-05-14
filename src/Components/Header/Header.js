@@ -29,10 +29,10 @@ const Header = () => {
   // Handle the Blog link click
   const handleBlogClick = (e) => {
     e.preventDefault();
-    if (location.pathname === "/ay_academy") {
+    if (location.pathname === "/") {
       document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
     } else {
-      window.location.href = "/ay_academy";
+      window.location.href = "/";
     }
   };
 
@@ -46,7 +46,7 @@ const Header = () => {
         <ul className={isMobile ? "nav-links-mobile open" : "nav-links"}>
           <li>
             <NavLink
-              to="/ay_academy"
+              to="/"
               className="nav-link"
               activeClassName="active-link"
               exact
